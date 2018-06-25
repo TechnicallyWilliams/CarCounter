@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="Vision.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Vision"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,40,45,0">
+        <TextBlock HorizontalAlignment="Left" Height="95" Margin="10,5,0,0" Text="Choose Camera:" FontSize="60"  TextWrapping="Wrap" VerticalAlignment="Top" Width="470"/>
+        <ComboBox x:Name="cam" HorizontalAlignment="Left" Height="70" Margin="500,5,0,0" VerticalAlignment="Top" Width="500" Grid.RowSpan="2" SelectionChanged="ComboBox_SelectionChanged">
+        </ComboBox>
+        <CaptureElement Margin="50,100,0,0"  Name="PreviewControl" Stretch="Uniform"/>
+        <TextBlock Name="lblName" Text="{x:Bind mainText, Mode=TwoWay}" FontSize="60" Margin="80,200,55,80"/>
+        <!-- <MediaPlayerElement x:Name="mediaPlayerElement2" Width="320" Height="240"/>-->
+    </Grid>
+</Page>

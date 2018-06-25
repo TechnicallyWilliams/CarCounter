@@ -1,0 +1,9 @@
+/p:AppxBundlePlatforms="$(BuildPlatform)" /p:AppxPackageDir="$(Build.ArtifactStagingDirectory)\AppxPackages\\" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload
+
+
+startwebcameraAsync
+startStreamAsync
+processcurrentvideoframe
+onimagepickerselectionchange()
+updateimageasync()
+evaluateimageasync()
