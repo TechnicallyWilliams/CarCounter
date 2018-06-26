@@ -8,11 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,40,45,0">
-        <TextBlock HorizontalAlignment="Left" Height="95" Margin="10,5,0,0" Text="Choose Camera:" FontSize="60"  TextWrapping="Wrap" VerticalAlignment="Top" Width="470"/>
-        <ComboBox x:Name="cam" HorizontalAlignment="Left" Height="70" Margin="500,5,0,0" VerticalAlignment="Top" Width="500" Grid.RowSpan="2" SelectionChanged="ComboBox_SelectionChanged">
-        </ComboBox>
-        <CaptureElement Margin="50,100,0,0"  Name="PreviewControl" Stretch="Uniform"/>
-        <TextBlock Name="lblName" Text="{x:Bind mainText, Mode=TwoWay}" FontSize="60" Margin="80,200,55,80"/>
-        <!-- <MediaPlayerElement x:Name="mediaPlayerElement2" Width="320" Height="240"/>-->
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Camera:" FontSize="48"/>
+                <ComboBox x:Name="cam" Margin="10,24" SelectionChanged="ComboBox_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Count:" FontSize="24"/>
+                <TextBlock Name="lblName" FontSize="24"/>
+            </StackPanel>
+        </StackPanel>
+        <CaptureElement Margin="50,124,0,0"  Name="PreviewControl" Stretch="Uniform"/>
     </Grid>
 </Page>
